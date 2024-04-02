@@ -1,11 +1,12 @@
-import { Signup } from "./components";
 import "./App.css";
+
+import { Frame } from "./components";
 
 function App() {
   return (
-    <>
-      <Signup />
-    </>
+    <div>
+      <Frame />
+    </div>
   );
 }
 
