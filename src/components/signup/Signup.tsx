@@ -41,19 +41,19 @@ function Signup() {
           <div className="form__name_and_username">
             <div>
               <label htmlFor="name">Name</label>
-              <input type="text" />
+              <input placeholder="john" type="text" />
             </div>
             <div>
               <label htmlFor="username">Username</label>
-              <input type="text" />
+              <input placeholder="john123" type="text" />
             </div>
           </div>
 
           <label htmlFor="email">Email</label>
-          <input type="email" />
+          <input placeholder="john@gmail.com" type="email" />
 
           <label htmlFor="password">Password</label>
-          <input type="password" />
+          <input placeholder="6+ characters" type="password" />
 
           <div className="form__checkbox_container">
             <div className="checkbox-wrapper-13">

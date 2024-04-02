@@ -59,10 +59,11 @@ input[type="password"] {
   outline: none;
   background-color: #f3f4f6;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   border-radius: 6px;
   margin-bottom: 2rem;
   margin-top: 0.4rem;
+  color: var(--text-primary);
 }
 
 input[type="text"]:focus,
@@ -159,9 +160,6 @@ a {
 .cover_author {
   font-weight: 500;
   color: var(--text-secondary);
-  display: flex;
-  justify-content: end;
-  align-items: end;
   opacity: 0.9;
 }
 
