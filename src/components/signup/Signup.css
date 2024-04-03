@@ -51,9 +51,7 @@
   margin-top: 0.4rem;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+.form_input {
   padding: 0.9rem;
   border: none;
   outline: none;
@@ -66,9 +64,7 @@ input[type="password"] {
   color: var(--text-primary);
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
+.form_input {
   background-color: #efeff0;
 }
 
@@ -134,7 +130,7 @@ a {
   width: 100%;
 }
 
-.logo_container svg {
+.signup_logo__container svg {
   height: auto;
   width: 6.5rem;
   fill: var(--text-secondary);

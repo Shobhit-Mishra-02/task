@@ -4,7 +4,7 @@ function Signup() {
   return (
     <div className="signup_page">
       <div className="login_cover">
-        <div className="logo_container">
+        <div className="signup_logo__container">
           <svg
             width="2500"
             height="615"
@@ -41,19 +41,27 @@ function Signup() {
           <div className="form__name_and_username">
             <div>
               <label htmlFor="name">Name</label>
-              <input placeholder="john" type="text" />
+              <input className="form_input" placeholder="john" type="text" />
             </div>
             <div>
               <label htmlFor="username">Username</label>
-              <input placeholder="john123" type="text" />
+              <input className="form_input" placeholder="john123" type="text" />
             </div>
           </div>
 
           <label htmlFor="email">Email</label>
-          <input placeholder="john@gmail.com" type="email" />
+          <input
+            className="form_input"
+            placeholder="john@gmail.com"
+            type="email"
+          />
 
           <label htmlFor="password">Password</label>
-          <input placeholder="6+ characters" type="password" />
+          <input
+            className="form_input"
+            placeholder="6+ characters"
+            type="password"
+          />
 
           <div className="form__checkbox_container">
             <div className="checkbox-wrapper-13">
