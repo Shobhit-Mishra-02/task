@@ -4,8 +4,8 @@ import { Frame, Signup } from "./components";
 function App() {
   return (
     <div>
-      <Frame />
-      {/* <Signup /> */}
+      {/* <Frame /> */}
+      <Signup />
     </div>
   );
 }

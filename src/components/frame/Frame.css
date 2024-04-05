@@ -1,3 +1,9 @@
+/* 
+
+Common frame design start
+
+*/
+
 .frame {
   padding: 0 1rem 0;
 }
@@ -8,24 +14,59 @@
   fill: var(--primary);
 }
 
-.first_frame__container {
-  padding: 0rem 1rem;
+/* 
+
+Common frame design end
+
+*/
+
+/* 
+
+Frame navbar design start
+
+*/
+.frame__navbar {
+  display: flex;
+  justify-content: start;
+  gap: 4rem;
+  align-items: center;
+  padding: 2rem 0;
 }
 
-.heading {
-  padding-bottom: 3rem;
+.prev_icon__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 6px;
+  background-color: #f3f4f6;
+  cursor: pointer;
 }
 
-.heading h1 {
-  font-size: 2.5rem;
-  color: var(--text-primary);
-  font-weight: 700;
-  padding-bottom: 1rem;
-}
-
-.heading p {
+.prev_icon__container svg {
   color: var(--text-secondary);
-  font-size: 1rem;
+  stroke-width: 3px;
+}
+
+.prev_icon__container:hover {
+  background-color: #e5e7eb;
+}
+
+/* 
+
+Frame navbar design end
+
+*/
+
+/* 
+
+Design for avatar frame container start
+
+*/
+
+.avatar_frame__container {
+  padding: 0rem 1rem;
 }
 
 .avatar_container {
@@ -33,9 +74,19 @@
 }
 
 .avatar__heading {
-  font-size: 1.6rem;
-  font-weight: 600;
+  padding-bottom: 3rem;
+}
+
+.avatar__heading h1 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  font-weight: 700;
   padding-bottom: 1rem;
+}
+
+.avatar__heading p {
+  color: var(--text-secondary);
+  font-size: 1rem;
 }
 
 .avatar__selector {
@@ -81,22 +132,34 @@
 }
 
 .avatar__input span {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.3rem;
+
   color: #9ca3af;
+}
+
+.avatar__input span > p {
   font-size: 1rem;
   font-weight: 700;
 }
 
-.location_container {
+.avatar__input span > svg {
+  stroke-width: 3px;
+}
+
+.avatar__loc_container {
   display: flex;
   flex-direction: column;
 }
 
-.location_container h3 {
+.avatar__loc_container h3 {
   font-size: 1.6rem;
   font-weight: 600;
 }
 
-.location_container input {
+.avatar__loc_container input {
   border: none;
   outline: none;
   border-bottom: 1px solid var(--text-ternary);
@@ -108,30 +171,49 @@
   color: var(--text-primary);
 }
 
-.btn_outline {
-  background-color: transparent;
-  border: 1px solid var(--text-ternary);
+/* 
+
+Design for avatar frame container end
+
+*/
+
+/* 
+
+Dribble selection frame design start 
+
+*/
+
+.dribbble_frame__heading h1 {
+  font-size: 2.5rem;
   color: var(--text-primary);
   font-weight: 700;
-  font-size: 1rem;
-  padding: 0.7rem 2.2rem;
-  border-radius: 6px;
-  cursor: pointer;
-  width: fit-content;
+  padding-bottom: 1rem;
+  text-align: center;
 }
 
-.btn_light {
-  background-color: var(--secondary);
-  border: none;
-  color: white;
+.dribbble_frame__heading p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  text-align: center;
+  padding-bottom: 6rem;
+}
+
+.dribbble_frame__btn_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0 1rem;
+  gap: 2rem;
+}
+
+.dribbble_frame__btn_container h3 {
+  font-size: 1.5rem;
   font-weight: 700;
-  font-size: 1rem;
-  padding: 0.7rem 2.2rem;
-  border-radius: 6px;
-  cursor: pointer;
+  text-align: center;
 }
 
-/* Dribble selection frame design */
+/* Card design  */
 
 .card_container {
   display: flex;
@@ -232,55 +314,11 @@
   color: #fff;
 }
 
-.second_frame__heading h1 {
-  font-size: 2.5rem;
-  color: var(--text-primary);
-  font-weight: 700;
-  padding-bottom: 1rem;
-  text-align: center;
-}
+/* 
 
-.second_frame__heading p {
-  color: var(--text-secondary);
-  font-size: 1rem;
-  text-align: center;
-  padding-bottom: 6rem;
-}
+Dribble selection frame design end 
 
-.second_frame__btn_container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 4rem 0 1rem;
-  gap: 2rem;
-}
-
-.second_frame__btn_container h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-.prev_icon__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 3rem;
-  width: 3rem;
-  border-radius: 6px;
-  background-color: #f3f4f6;
-  cursor: pointer;
-}
-
-.prev_icon__container svg {
-  color: var(--text-secondary);
-  stroke-width: 3px;
-}
-
-.prev_icon__container:hover {
-  background-color: #e5e7eb;
-}
+*/
 
 /* Responsive design */
 
@@ -288,7 +326,7 @@
   .frame {
     padding: 0 3rem 0;
   }
-  .first_frame__container {
+  .avatar_frame__container {
     max-width: 600px;
     margin: auto;
   }
@@ -304,7 +342,7 @@
   .frame {
     padding: 0 6rem 0;
   }
-  .first_frame__container {
+  .avatar_frame__container {
     max-width: 900px;
   }
   .heading {
@@ -326,7 +364,7 @@
   .avatar_container {
     padding-bottom: 5rem;
   }
-  .location_container h3 {
+  .avatar__loc_container h3 {
     font-size: 2rem;
     font-weight: 600;
     padding-bottom: 2rem;
@@ -337,10 +375,10 @@
   .card_container {
     gap: 2rem;
   }
-  .second_frame__heading h1 {
+  .dribbble_frame__heading h1 {
     font-size: 3rem;
   }
-  .second_frame__heading p {
+  .dribbble_frame__heading p {
     font-size: 1.3rem;
     padding-bottom: 8rem;
   }

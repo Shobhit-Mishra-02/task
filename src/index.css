@@ -24,6 +24,8 @@ body {
   min-height: 100vh;
 }
 
+/* utility classes */
+
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
   .checkbox-wrapper-13 input[type="checkbox"] {
     --active: var(--primary);
@@ -113,4 +115,46 @@ body {
   .checkbox-wrapper-13 input[type="checkbox"]:not(.switch):checked {
     --r: 43deg;
   }
+}
+
+.checkbox-wrapper-13 * {
+  box-sizing: inherit;
+}
+.checkbox-wrapper-13 *:before,
+.checkbox-wrapper-13 *:after {
+  box-sizing: inherit;
+}
+
+.btn_outline {
+  background-color: transparent;
+  border: 1px solid var(--text-ternary);
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.7rem 2.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.btn_light {
+  background-color: var(--secondary);
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.7rem 2.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn_primary {
+  background-color: var(--primary);
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.7rem 2.2rem;
+  border-radius: 6px;
+  cursor: pointer;
 }

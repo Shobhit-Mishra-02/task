@@ -4,8 +4,8 @@ import { useState } from "react";
 function AvatarFrame() {
   const [imageUrl, setImageUrl] = useState("");
   return (
-    <div className="first_frame__container">
-      <div className="heading">
+    <div className="avatar_frame__container">
+      <div className="avatar__heading">
         <h1>Welcome! Let's create your profile</h1>
         <p>Let others get to know better! You can do these later</p>
       </div>
@@ -42,7 +42,6 @@ function AvatarFrame() {
             </label>
             <input
               onChange={(e) => {
-                console.log("change");
                 if (e.target.files?.length) {
                   setImageUrl(URL.createObjectURL(e.target.files[0]));
                 }
@@ -51,17 +50,33 @@ function AvatarFrame() {
               name="file"
               id="file"
             />
-            <span> {">"} Or Choose one of our defaults</span>
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-chevron-right"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+              <p>Or Choose one of our defaults</p>{" "}
+            </span>
           </div>
         </div>
       </div>
 
-      <div className="location_container">
+      <div className="avatar__loc_container">
         <h3>Add your location</h3>
         <input placeholder="Enter a location" type="text" />
       </div>
 
-      <div className="next_btn_container">
+      <div>
         <button className="btn_light">Next</button>
       </div>
     </div>
@@ -129,8 +144,8 @@ function Card({
 function DribbbleFrame() {
   const [cardIndex, setCardIndex] = useState(-1);
   return (
-    <div className="second_frame__container">
-      <div className="second_frame__heading">
+    <div>
+      <div className="dribbble_frame__heading">
         <h1>What brings you to Dribble?</h1>
         <p>
           Select the options that describe you. Don't worry, you can explore
@@ -146,7 +161,7 @@ function DribbbleFrame() {
         })}
       </div>
 
-      <div className="second_frame__btn_container">
+      <div className="dribbble_frame__btn_container">
         <h3>Anything else? You can select multiple</h3>
         <button className="btn_light">Finish</button>
       </div>
@@ -157,15 +172,7 @@ function DribbbleFrame() {
 function Frame() {
   return (
     <div className="frame">
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "start",
-          gap: "4rem",
-          alignItems: "center",
-          padding: "2rem 0",
-        }}
-      >
+      <div className="frame__navbar">
         <div className="frame__logo_container">
           <svg
             width="2500"
@@ -195,8 +202,8 @@ function Frame() {
         </div>
       </div>
 
-      <AvatarFrame />
-      {/* <DribbbleFrame /> */}
+      {/* <AvatarFrame /> */}
+      <DribbbleFrame />
     </div>
   );
 }
