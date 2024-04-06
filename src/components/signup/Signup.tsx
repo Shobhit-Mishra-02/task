@@ -1,6 +1,15 @@
 import "./Signup.css";
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
+  const navigate = useNavigate();
+
+  const formHandler = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log("submit");
+    navigate("/frame");
+  };
+
   return (
     <div className="signup_page">
       <div className="login_cover">
@@ -36,16 +45,26 @@ function Signup() {
             Already a member? <a href="#">Sign in</a>
           </p>
         </div>
-        <form className="signup_form">
+        <form onSubmit={formHandler} className="signup_form">
           <h2 className="form_heading">Sign up to Dribbble</h2>
           <div className="form__name_and_username">
             <div>
               <label htmlFor="name">Name</label>
-              <input className="form_input" placeholder="john" type="text" />
+              <input
+                className="form_input"
+                placeholder="john"
+                type="text"
+                required
+              />
             </div>
             <div>
               <label htmlFor="username">Username</label>
-              <input className="form_input" placeholder="john123" type="text" />
+              <input
+                className="form_input"
+                placeholder="john123"
+                type="text"
+                required
+              />
             </div>
           </div>
 
@@ -54,6 +73,7 @@ function Signup() {
             className="form_input"
             placeholder="john@gmail.com"
             type="email"
+            required
           />
 
           <label htmlFor="password">Password</label>
@@ -61,6 +81,7 @@ function Signup() {
             className="form_input"
             placeholder="6+ characters"
             type="password"
+            required
           />
 
           <div className="form__checkbox_container">

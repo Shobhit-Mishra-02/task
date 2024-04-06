@@ -8,7 +8,11 @@ Common frame design start
   padding: 0 1rem 0;
 }
 
-.frame__logo_container > svg {
+.frame__logo_container {
+  margin: 0.5rem 0;
+}
+
+.frame__logo_container svg {
   height: auto;
   width: 6.5rem;
   fill: var(--primary);
@@ -78,7 +82,7 @@ Design for avatar frame container start
 }
 
 .avatar__heading h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: var(--text-primary);
   font-weight: 700;
   padding-bottom: 1rem;
@@ -154,9 +158,11 @@ Design for avatar frame container start
   flex-direction: column;
 }
 
-.avatar__loc_container h3 {
+.avatar__loc_container h3,
+.avatar_container h3 {
   font-size: 1.6rem;
   font-weight: 600;
+  padding-bottom: 2rem;
 }
 
 .avatar__loc_container input {
@@ -183,6 +189,10 @@ Dribble selection frame design start
 
 */
 
+.dribbble_frame__heading {
+  padding-bottom: 6rem;
+}
+
 .dribbble_frame__heading h1 {
   font-size: 2.5rem;
   color: var(--text-primary);
@@ -195,7 +205,6 @@ Dribble selection frame design start
   color: var(--text-secondary);
   font-size: 1rem;
   text-align: center;
-  padding-bottom: 6rem;
 }
 
 .dribbble_frame__btn_container {
@@ -360,11 +369,16 @@ Dribble selection frame design end
   .avatar__heading {
     font-size: 2rem;
     padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+  .avatar__heading p {
+    font-size: 1.3rem;
   }
   .avatar_container {
     padding-bottom: 5rem;
   }
-  .avatar__loc_container h3 {
+  .avatar__loc_container h3,
+  .avatar_container h3 {
     font-size: 2rem;
     font-weight: 600;
     padding-bottom: 2rem;
@@ -372,14 +386,19 @@ Dribble selection frame design end
 }
 
 @media (min-width: 1500px) {
+  .avatar__heading {
+    padding-bottom: 4rem;
+  }
   .card_container {
     gap: 2rem;
+  }
+  .dribbble_frame__heading {
+    padding-bottom: 9rem;
   }
   .dribbble_frame__heading h1 {
     font-size: 3rem;
   }
   .dribbble_frame__heading p {
     font-size: 1.3rem;
-    padding-bottom: 8rem;
   }
 }

@@ -131,10 +131,11 @@ body {
   color: var(--text-primary);
   font-weight: 700;
   font-size: 1rem;
-  padding: 0.7rem 2.2rem;
+  padding: 0.8rem 0;
   border-radius: 6px;
   cursor: pointer;
-  width: fit-content;
+  width: 12rem;
+  text-align: center;
 }
 
 .btn_light {
@@ -143,9 +144,11 @@ body {
   color: white;
   font-weight: 700;
   font-size: 1rem;
-  padding: 0.7rem 2.2rem;
+  padding: 0.8rem 0rem;
   border-radius: 6px;
   cursor: pointer;
+  width: 12rem;
+  text-align: center;
 }
 
 .btn_primary {
@@ -154,7 +157,14 @@ body {
   color: white;
   font-weight: 700;
   font-size: 1rem;
-  padding: 0.7rem 2.2rem;
+  padding: 0.7rem 0rem;
   border-radius: 6px;
   cursor: pointer;
+  width: 12rem;
+  text-align: center;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: auto;
 }
