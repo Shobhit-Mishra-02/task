@@ -1,0 +1,45 @@
+.home_content__heading {
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 4rem 0 2rem;
+}
+
+.home_content__email_icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email_icon {
+  height: auto;
+  width: 12rem;
+}
+
+.home_content__text {
+  color: var(--text-secondary);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+  font-size: 1.2rem;
+
+  max-width: 760px;
+
+  text-align: center;
+  margin: auto;
+
+  padding-top: 4rem;
+}
+
+.home_content__text strong {
+  color: var(--text-primary);
+}
+
+.home_content__text span {
+  color: var(--primary);
+  font-weight: 600;
+}
