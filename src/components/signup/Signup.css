@@ -68,10 +68,6 @@
   background-color: #efeff0;
 }
 
-/* input[type="email"]:invalid {
-  background-color: #fee2e2;
-} */
-
 label {
   font-size: 1rem;
   font-weight: 700;
@@ -184,7 +180,6 @@ a {
   }
   .cover_heading {
     font-size: 2.5rem;
-    /* padding-top: 6rem; */
   }
   .cover__image_container img {
     padding-top: 4rem;
