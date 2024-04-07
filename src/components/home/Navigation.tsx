@@ -14,7 +14,7 @@ function Menu() {
 }
 
 function Navigation() {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
 
   return (
     <nav className="navbar">
@@ -74,11 +74,11 @@ function Navigation() {
             </div>
             <Menu />
             <div className="menu__upload_btn_container">
-              <button className="btn_primary">Upload</button>
+              <button className="mobile__upload_btn">Upload</button>
             </div>
           </ul>
 
-          <ul className="menu_tablet">
+          <ul className="menu_desktop">
             <Menu />
           </ul>
         </div>
@@ -120,7 +120,7 @@ function Navigation() {
 
           <img src="/avataar.jpg" alt="avatar" />
 
-          <button className="upload_btn">Upload</button>
+          <button className="desktop__upload_btn">Upload</button>
         </div>
       </div>
 

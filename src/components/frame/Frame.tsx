@@ -3,13 +3,30 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-function Card() {
+function Card({
+  cards,
+  setCards,
+  cardIndex,
+}: {
+  cards: number[];
+  setCards: React.Dispatch<React.SetStateAction<number[]>>;
+  cardIndex: number;
+}) {
   const [isSelected, setSelected] = useState(false);
+
+  const handleOnClick = () => {
+    if (isSelected) {
+      setCards(cards.filter((card) => card !== cardIndex));
+    } else {
+      setCards([...cards, cardIndex]);
+    }
+    setSelected(!isSelected);
+  };
 
   return (
     <div
       className={`card ${isSelected ? "card__border_highlight" : ""}`}
-      onClick={() => setSelected(true)}
+      onClick={handleOnClick}
     >
       <div
         className={`card__img_heading ${
@@ -49,8 +66,8 @@ function Card() {
 
 function DribbbleFrame() {
   const navigate = useNavigate();
-  const [cardIndex, setCardIndex] = useState(-1);
   const [isDisabled, setDisabled] = useState(true);
+  const [cards, setCards] = useState<number[]>([]);
 
   const handleSubmission = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -58,13 +75,12 @@ function DribbbleFrame() {
   };
 
   useEffect(() => {
-    console.log(cardIndex);
-    if (cardIndex != -1) {
+    if (cards.length) {
       setDisabled(false);
     } else {
       setDisabled(true);
     }
-  }, [cardIndex]);
+  }, [cards]);
 
   return (
     <form onSubmit={handleSubmission}>
@@ -78,7 +94,14 @@ function DribbbleFrame() {
 
       <div className="card_container">
         {new Array(3).fill(1).map((_, i) => {
-          return <Card key={`card_${i}`} />;
+          return (
+            <Card
+              key={`card_${i}`}
+              cardIndex={i}
+              setCards={setCards}
+              cards={cards}
+            />
+          );
         })}
       </div>
 
@@ -218,7 +241,7 @@ function AvatarFrame({
 }
 
 function Frame() {
-  let [page, setPage] = useState(2);
+  let [page, setPage] = useState(1);
 
   useEffect(() => {
     setPage(1);

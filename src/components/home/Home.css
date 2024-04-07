@@ -1,3 +1,7 @@
+.home_content {
+  padding: 5rem 6rem;
+}
+
 .home_content__heading {
   font-size: 2.4rem;
   font-weight: 600;
@@ -17,11 +21,6 @@
   height: auto;
   width: 12rem;
   stroke: var(--text-primary);
-}
-
-.tick_icon {
-  height: auto;
-  width: 3rem;
 }
 
 .home_content__text {
