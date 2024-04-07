@@ -106,7 +106,8 @@ function DribbbleFrame() {
       </div>
 
       <div className="dribbble_frame__btn_container">
-        <h3>Anything else? You can select multiple</h3>
+        {!isDisabled ? <h3>Anything else? You can select multiple</h3> : ""}
+
         {isDisabled ? (
           <button type="submit" className="btn_primary" disabled>
             Finish
